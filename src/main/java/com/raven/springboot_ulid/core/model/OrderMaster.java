@@ -1,7 +1,7 @@
 package com.raven.springboot_ulid.core.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.raven.springboot_ulid.common.model.Uuid;
+import com.raven.springboot_ulid.common.model.Ulid;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -13,8 +13,8 @@ import java.util.List;
 @Table(name = "ORDER_MASTER")
 public class OrderMaster {
     @Id
-    @Uuid
-    @Column(name = "id", unique = true, nullable = false)
+    @Ulid
+    @Column(name = "id", unique = true, nullable = false, length = 26)
     private String id;
 
     @Column(name = "order_date")

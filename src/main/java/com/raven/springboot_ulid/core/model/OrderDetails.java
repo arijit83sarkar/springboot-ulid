@@ -1,7 +1,7 @@
 package com.raven.springboot_ulid.core.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.raven.springboot_ulid.common.model.Uuid;
+import com.raven.springboot_ulid.common.model.Ulid;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -10,8 +10,8 @@ import java.math.BigDecimal;
 @Table(name = "ORDER_DETAILS")
 public class OrderDetails {
     @Id
-    @Uuid
-    @Column(name = "ID", unique = true, nullable = false)
+    @Ulid
+    @Column(name = "ID", unique = true, nullable = false, length = 26)
     private String id;
 
     @Column(name = "item_id", length = 40)

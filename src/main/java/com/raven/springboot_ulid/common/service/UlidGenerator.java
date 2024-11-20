@@ -8,7 +8,7 @@ import org.hibernate.generator.EventTypeSets;
 
 import java.util.EnumSet;
 
-public class UuidGenerator implements BeforeExecutionGenerator {
+public class UlidGenerator implements BeforeExecutionGenerator {
     @Override
     public Object generate(SharedSessionContractImplementor sharedSessionContractImplementor,
                            Object o, Object o1, EventType eventType) {
